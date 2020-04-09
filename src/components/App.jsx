@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import api from '../api';
 import SearchBar from './SearchBar';
-import VideoModule from './VideoModule';
+import VideoBlock from './VideoBlock';
 
 class App extends Component {
   state = {
@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <div className="app ui container">
         <SearchBar onTermSubmit={this.onTermSubmit} />
-        <VideoModule appState={this.state} onVideoSelect={this.onVideoSelect} />
+        <VideoBlock appState={this.state} onVideoSelect={this.onVideoSelect} />
       </div>
     );
   }
