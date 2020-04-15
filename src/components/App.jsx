@@ -4,6 +4,9 @@ import api from '../api';
 import SearchBar from './SearchBar';
 import VideoBlock from './VideoBlock';
 
+const KEY = 'AIzaSyDrMTlL_mm8IF37Ao8CyEkCce7eQmFP44E';
+const searchURL = `?part=snippet&key=${KEY}`;
+
 class App extends Component {
   state = {
     videos: [],
@@ -15,7 +18,7 @@ class App extends Component {
   }
 
   onTermSubmit = async term => {
-    const response = await api.get('/search', {
+    const response = await api.get(`${searchURL}`, {
       params: {
         q: term,
       },
