@@ -14,13 +14,14 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.onTermSubmit('cats');
+    this.onTermSubmit('top 100');
   }
 
   onTermSubmit = async term => {
     const response = await api.get(`${searchURL}`, {
       params: {
         q: term,
+        maxResults: 10,
       },
     });
 
