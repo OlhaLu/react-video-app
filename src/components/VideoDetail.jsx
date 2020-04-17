@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from 'styled-components';
 
 const VideoDetail = ({ selectedVideo }) => {
   if (!selectedVideo) {
@@ -11,15 +12,30 @@ const VideoDetail = ({ selectedVideo }) => {
 
   return (
     <div>
-      <div className="ui embed">
+      <DetailsVideoSrc>
         <iframe title={description} src={videoSrc} frameBorder="0" />
-      </div>
-      <div className="ui segment">
-        <h4 className="ui header">{title}</h4>
+      </DetailsVideoSrc>
+      <Details>
+        <DetailsHeader>{title}</DetailsHeader>
         <p>{description}</p>
-      </div>
+      </Details>
     </div>
   );
 };
 
 export default VideoDetail;
+
+const DetailsVideoSrc = styles.div`
+margin-top: 10px;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 4px;
+`;
+
+const Details = styles.div`
+font-size: 14px;
+`;
+
+const DetailsHeader = styles.h4`
+font-size: 16px;
+`;

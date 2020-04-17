@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
-import api from '../api';
 import SearchBar from './SearchBar';
 import VideoBlock from './VideoBlock';
+import api from '../api';
+import styles from 'styled-components';
 
 const KEY = 'AIzaSyDrMTlL_mm8IF37Ao8CyEkCce7eQmFP44E';
 const searchURL = `?part=snippet&key=${KEY}`;
@@ -14,7 +14,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.onTermSubmit('top 100');
+    this.onTermSubmit('react js');
   }
 
   onTermSubmit = async term => {
@@ -39,12 +39,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app ui container">
+      <AppContainer className={styles.container}>
         <SearchBar onTermSubmit={this.onTermSubmit} />
         <VideoBlock appState={this.state} onVideoSelect={this.onVideoSelect} />
-      </div>
+      </AppContainer>
     );
   }
 }
 
 export default App;
+
+const AppContainer = styles.div` 
+  text-align: center;
+  margin: 0 auto;
+  width: 1400px;
+  background-color: #E0FFFF;
+`;

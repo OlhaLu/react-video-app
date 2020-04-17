@@ -1,18 +1,38 @@
 import React from 'react';
+import styles from 'styled-components';
 
 const VideoItem = ({ video, onVideoSelect }) => {
   return (
-    <div className="item video-item" onClick={() => onVideoSelect(video)}>
-      <img
-        className="ui image"
+    <ItemBlock onClick={() => onVideoSelect(video)}>
+      <ItemImg
         src={video.snippet.thumbnails.medium.url}
         alt={video.snippet.description}
       />
-      <div className="content">
-        <div className="header">{video.snippet.title}</div>
-      </div>
-    </div>
+      <ItemContent>
+        <ItemHeader>{video.snippet.title}</ItemHeader>
+      </ItemContent>
+    </ItemBlock>
   );
 };
 
 export default VideoItem;
+
+const ItemBlock = styles.div`
+cursor: pointer;
+
+&:hover {
+  background-color: #ADD8E6;
+}
+`;
+
+const ItemImg = styles.img`
+max-width: 200px;
+`;
+
+const ItemContent = styles.div`
+text-align: center;
+`;
+
+const ItemHeader = styles.div`
+  text-align: center;
+`;

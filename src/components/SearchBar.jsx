@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from 'styled-components';
 
 class SearchBar extends Component {
   state = { term: '' };
@@ -16,21 +17,60 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="search-bar ui segment">
-        <form className="ui form" onSubmit={this.onFormSubmit}>
-          <div className="field">
+      <SearchBlock>
+        <SearchForm onSubmit={this.onFormSubmit}>
+          <SearchInputBlock>
             <label htmlFor="search-bar-input">Video Search</label>
-            <input
+            <SearchInput
               id="search-bar-input"
-              type="text"
+              type="search"
               value={this.state.term}
               onChange={this.onInputChange}
             />
-          </div>
-        </form>
-      </div>
+            <SearchButton type="submit">Search Video</SearchButton>
+          </SearchInputBlock>
+        </SearchForm>
+      </SearchBlock>
     );
   }
 }
 
 export default SearchBar;
+
+const SearchBlock = styles.div`
+  margin: 20px 0;
+  background: #4682B4;
+  font-size: 18px;
+  padding: 15px;
+  border: 1px solid #ddd;
+`;
+
+const SearchForm = styles.form`
+background: #AFEEEE;
+`;
+
+const SearchInputBlock = styles.div`
+  padding: 15px 0;
+  color: #4682B4;
+  width: 100%;
+  height: 60px;
+`;
+
+const SearchInput = styles.input`
+  // margin: 20px;
+  outline: none;
+  background: transparent;
+`;
+
+const SearchButton = styles.button`
+  height: 30px;
+  width: 120px;
+  cursor: pointer;
+
+
+  &:before {
+    content: '\f002';
+    font-size: 16px;
+    color: #4682B4;
+  }
+`;
