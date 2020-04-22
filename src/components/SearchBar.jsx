@@ -47,6 +47,7 @@ class SearchBar extends Component {
 export default SearchBar;
 
 const SearchBlock = styles.div`
+  text-align: center;
   margin: 20px 0;
   background: #4682B4;
   font-size: 18px;

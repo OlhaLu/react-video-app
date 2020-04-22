@@ -6,19 +6,27 @@ import styles from 'styled-components';
 class VideoBlock extends Component {
   render() {
     return (
-      <div>
-        <div>
+      <VideoBlockContainer>
+        <VideoDetailBlock>
           <VideoDetail selectedVideo={this.props.appState.selectedVideo} />
-        </div>
-        <div>
+        </VideoDetailBlock>
+        <VideosListBlock>
           <VideosList
             videos={this.props.appState.videos}
             onVideoSelect={this.props.onVideoSelect}
           />
-        </div>
-      </div>
+        </VideosListBlock>
+      </VideoBlockContainer>
     );
   }
 }
 
 export default VideoBlock;
+
+const VideoBlockContainer = styles.div``;
+
+const VideoDetailBlock = styles.div`
+`;
+
+const VideosListBlock = styles.div`
+`;

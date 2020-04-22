@@ -50,8 +50,7 @@ class App extends Component {
 export default App;
 
 const AppContainer = styles.div` 
-  text-align: center;
   margin: 0 auto;
-  width: 1400px;
+  width: 1600px;
   background-color: #E0FFFF;
 `;

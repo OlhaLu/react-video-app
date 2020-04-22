@@ -26,13 +26,14 @@ cursor: pointer;
 `;
 
 const ItemImg = styles.img`
-max-width: 200px;
+max-width: 300px;
 `;
 
 const ItemContent = styles.div`
-text-align: center;
+padding: 20px;
 `;
 
 const ItemHeader = styles.div`
   text-align: center;
+  font-size: 16px;
 `;

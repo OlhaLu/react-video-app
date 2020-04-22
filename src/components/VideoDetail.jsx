@@ -13,7 +13,7 @@ const VideoDetail = ({ selectedVideo }) => {
   return (
     <div>
       <DetailsVideoSrc>
-        <iframe title={description} src={videoSrc} frameBorder="0" />
+        <VideoSrcIframe title={description} src={videoSrc} frameBorder="0" />
       </DetailsVideoSrc>
       <Details>
         <DetailsHeader>{title}</DetailsHeader>
@@ -26,16 +26,21 @@ const VideoDetail = ({ selectedVideo }) => {
 export default VideoDetail;
 
 const DetailsVideoSrc = styles.div`
-margin-top: 10px;
 padding: 10px;
 border: 1px solid #ddd;
 border-radius: 4px;
+max-width: 900px;
+`;
+
+const VideoSrcIframe = styles.iframe`
+width: 800px;
+height: 500px;
 `;
 
 const Details = styles.div`
-font-size: 14px;
+font-size: 18px;
 `;
 
 const DetailsHeader = styles.h4`
-font-size: 16px;
+font-size: 20px;
 `;
