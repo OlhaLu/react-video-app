@@ -21,7 +21,6 @@ class SearchBar extends Component {
       <SearchBlock>
         <SearchForm onSubmit={this.onFormSubmit}>
           <SearchInputBlock>
-            <label htmlFor="search-bar-input">VIDEO</label>
             <SearchInput
               id="search-bar-input"
               type="search"
@@ -31,7 +30,7 @@ class SearchBar extends Component {
             <Button
               size="small"
               type="submit"
-              variant="outlined"
+              variant="contained"
               color="primary"
               disableElevation
             >
@@ -48,20 +47,17 @@ export default SearchBar;
 
 const SearchBlock = styles.div`
   text-align: center;
-  margin: 5px 0;
-  background: #4682B4;
   font-size: 16px;
-  padding: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #4682B4;
 `;
 
 const SearchForm = styles.form`
-background: #AFEEEE;
+background: #008080;
 `;
 
 const SearchInputBlock = styles.div`
   padding: 15px 0;
-  color: #4682B4;
+  color: #00008B;
   width: 100%;
   height: 60px;
 `;

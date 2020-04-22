@@ -27,6 +27,7 @@ const DetailsVideoSrc = styles.div`
 margin: 50px 15px;
 padding: 25px;
 max-width: 900px;
+color: #F5FFFA;
 `;
 
 const VideoSrcIframe = styles.iframe`
@@ -35,9 +36,10 @@ height: 500px;
 `;
 
 const DetailsHeader = styles.h4`
-font-size: 20px;
+color: #40E0D0;
+font-size: 22px;
 `;
 
 const DetailsDescriptions = styles.p`
-font-size: 18px
+font-size: 18px;
 `;

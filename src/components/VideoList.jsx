@@ -14,4 +14,6 @@ export default VideosList;
 
 const VideoRenderList = styles.div`
 width: 700px;
+background: #696969;
+margin: 15px 0;
 `;

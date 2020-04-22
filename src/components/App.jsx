@@ -52,5 +52,5 @@ export default App;
 const AppContainer = styles.div` 
   margin: 0 auto;
   width: 1600px;
-  background-color: #E0FFFF;
+  background-color: #000000;
 `;

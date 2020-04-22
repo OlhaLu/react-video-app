@@ -21,10 +21,12 @@ const ItemBlock = styles.div`
 cursor: pointer;
 border: 1px solid #ddd;
 border-radius: 4px;
-padding: 5px;
+padding: 5px 0;
+color: #40E0D0;
 
 &:hover {
-  background-color: #ADD8E6;
+  background-color: #FF4500;
+  color: #F5FFFA;
 }
 `;
 
