@@ -24,5 +24,7 @@ class VideoBlock extends Component {
 export default VideoBlock;
 
 const VideoBlockContainer = styles.div`
+margin: 0 auto;
+width: 1600px;
 display: flex
 `;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './Header';
 import SearchBar from './SearchBar';
 import VideoBlock from './VideoBlock';
 import api from '../api';
@@ -21,7 +22,7 @@ class App extends Component {
     const response = await api.get(`${searchURL}`, {
       params: {
         q: term,
-        maxResults: 20,
+        maxResults: 10,
       },
     });
 
@@ -39,7 +40,8 @@ class App extends Component {
 
   render() {
     return (
-      <AppContainer className={styles.container}>
+      <AppContainer>
+        {/* <Header /> */}
         <SearchBar onTermSubmit={this.onTermSubmit} />
         <VideoBlock appState={this.state} onVideoSelect={this.onVideoSelect} />
       </AppContainer>
@@ -50,7 +52,5 @@ class App extends Component {
 export default App;
 
 const AppContainer = styles.div` 
-  margin: 0 auto;
-  width: 1600px;
   background-color: #000000;
 `;

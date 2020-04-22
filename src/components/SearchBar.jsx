@@ -56,7 +56,7 @@ background: #008080;
 `;
 
 const SearchInputBlock = styles.div`
-  padding: 15px 0;
+  padding: 20px 0 0 0;
   color: #00008B;
   width: 100%;
   height: 60px;
