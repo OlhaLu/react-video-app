@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 import styles from 'styled-components';
 
 class SearchBar extends Component {
@@ -27,7 +28,15 @@ class SearchBar extends Component {
               value={this.state.term}
               onChange={this.onInputChange}
             />
-            <SearchButton type="submit">Search Video</SearchButton>
+            <Button
+              size="small"
+              type="submit"
+              variant="outlined"
+              color="primary"
+              disableElevation
+            >
+              Search Video
+            </Button>
           </SearchInputBlock>
         </SearchForm>
       </SearchBlock>
@@ -57,20 +66,8 @@ const SearchInputBlock = styles.div`
 `;
 
 const SearchInput = styles.input`
-  // margin: 20px;
+  height: 30px;
+  width: 300px;
   outline: none;
   background: transparent;
-`;
-
-const SearchButton = styles.button`
-  height: 30px;
-  width: 120px;
-  cursor: pointer;
-
-
-  &:before {
-    content: '\f002';
-    font-size: 16px;
-    color: #4682B4;
-  }
 `;
