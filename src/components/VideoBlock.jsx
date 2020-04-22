@@ -7,15 +7,15 @@ class VideoBlock extends Component {
   render() {
     return (
       <VideoBlockContainer>
-        <VideoDetailBlock>
+        <div>
           <VideoDetail selectedVideo={this.props.appState.selectedVideo} />
-        </VideoDetailBlock>
-        <VideosListBlock>
+        </div>
+        <div>
           <VideosList
             videos={this.props.appState.videos}
             onVideoSelect={this.props.onVideoSelect}
           />
-        </VideosListBlock>
+        </div>
       </VideoBlockContainer>
     );
   }
@@ -23,10 +23,6 @@ class VideoBlock extends Component {
 
 export default VideoBlock;
 
-const VideoBlockContainer = styles.div``;
-
-const VideoDetailBlock = styles.div`
-`;
-
-const VideosListBlock = styles.div`
+const VideoBlockContainer = styles.div`
+display: flex
 `;

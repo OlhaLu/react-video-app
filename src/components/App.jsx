@@ -21,7 +21,7 @@ class App extends Component {
     const response = await api.get(`${searchURL}`, {
       params: {
         q: term,
-        maxResults: 10,
+        maxResults: 5,
       },
     });
 

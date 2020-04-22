@@ -19,6 +19,9 @@ export default VideoItem;
 
 const ItemBlock = styles.div`
 cursor: pointer;
+border: 1px solid #ddd;
+border-radius: 4px;
+padding: 5px;
 
 &:hover {
   background-color: #ADD8E6;
@@ -26,14 +29,13 @@ cursor: pointer;
 `;
 
 const ItemImg = styles.img`
-max-width: 300px;
+max-width: 200px;
 `;
 
 const ItemContent = styles.div`
-padding: 20px;
+padding: 5px;
 `;
 
 const ItemHeader = styles.div`
-  text-align: center;
-  font-size: 16px;
+  font-size: 18px;
 `;

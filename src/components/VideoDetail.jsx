@@ -13,12 +13,10 @@ const VideoDetail = ({ selectedVideo }) => {
   return (
     <div>
       <DetailsVideoSrc>
-        <VideoSrcIframe title={description} src={videoSrc} frameBorder="0" />
-      </DetailsVideoSrc>
-      <Details>
+        <VideoSrcIframe title={title} src={videoSrc} frameBorder="0" />
         <DetailsHeader>{title}</DetailsHeader>
-        <p>{description}</p>
-      </Details>
+        <DetailsDescriptions>{description}</DetailsDescriptions>
+      </DetailsVideoSrc>
     </div>
   );
 };
@@ -26,9 +24,8 @@ const VideoDetail = ({ selectedVideo }) => {
 export default VideoDetail;
 
 const DetailsVideoSrc = styles.div`
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 4px;
+margin: 50px 15px;
+padding: 25px;
 max-width: 900px;
 `;
 
@@ -37,10 +34,10 @@ width: 800px;
 height: 500px;
 `;
 
-const Details = styles.div`
-font-size: 18px;
-`;
-
 const DetailsHeader = styles.h4`
 font-size: 20px;
+`;
+
+const DetailsDescriptions = styles.p`
+font-size: 18px
 `;
